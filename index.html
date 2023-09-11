@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles/styles.css"/>
+    <link rel="stylesheet" href="styles/styles.css" />
 </head>
+
 <body>
     <div class="calcMain">
         <div class="header">
@@ -13,30 +15,32 @@
         </div>
 
         <button type="submit">AC</button>
-        <button type="button" class="topThree">+/-</button>
-        <button type="button" class="topThree">%</button>
-        <button type="button" class="operations divide">/</button>
+        <button type="button" class="button topThree">+/-</button>
+        <button type="button" class="button topThree">%</button>
+        <button type="button" class="button operations divide">/</button>
 
-        <button type="button" class="numbers seven">7</button>
-        <button type="button" class="numbers eight">8</button>
-        <button type="button" class="numbers nine">9</button>
-        <button type="button" class="operations mult">x</button>
+        <button type="button" id="numSeven" value=7 class="button numbers seven">7</button>
+        <button type="button" id="numEight" value=8 class="button numbers eight">8</button>
+        <button type="button" id="numNine" value=9 class="button numbers nine">9</button>
+        <button type="button" class="button operations mult">x</button>
 
-        <button type="button" class="numbers four">4</button>
-        <button type="button" class="numbers five">5</button>
-        <button type="button" class="numbers six">6</button>
-        <button type="button" class="operations minus">-</button>
+        <button type="button" id="numFour" value=4 class="button numbers four">4</button>
+        <button type="button" id="numFive" value=5 class="button numbers five">5</button>
+        <button type="button" id="numSix" value=6 class="button numbers six">6</button>
+        <button type="button" class="button operations minus">-</button>
 
-        <button type="button" class="numbers one">1</button>
-        <button type="button" class="numbers two">2</button>
-        <button type="button" class="numbers three">3</button>
-        <button type="button" class="operations plus">+</button>
+        <button type="button" id="numOne" value=1 class="button numbers one">1</button>
+        <button type="button" id="numTwo" value=2 class="button numbers two">2</button>
+        <button type="button" id="numThree" value=3 class="button numbers three">3</button>
+        <button type="button" class="button operations plus">+</button>
 
-        <button type="button" class="numbers zero">0</button>
-        <button type="button" class="numbers dot">.</button>
-        <button type="button" class="operations equal">=</button>
+        <button type="button" id="numZero" value=0 class="button numbers zero">0</button>
+        <button type="button" class="button numbers dot">.</button>
+        <button type="button" class="button operations equal">=</button>
 
     </div>
 
 </body>
+<script src="scripts/scripts.js"></script>
+
 </html>
