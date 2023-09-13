@@ -13,85 +13,29 @@ const numZero = document.getElementById('numZero').value;
 
 const button = document.querySelectorAll('.button');
 
+const add = document.getElementById('add').value;
+const subtract = document.getElementById('subtract').value;
+const divide = document.getElementById('divide').value;
+const multiply = document.getElementById('multiply').value;
 
-//my goal here is option 1: if the value of the button clicked is = to *certain value*, return certain value.
-//option 2: call number when clicked
-//assign values to buttons...?
 
+//new goal: make the values appear on the calculator screen.
+//Update: DONE!
+//new goal: display mult nums/vals at once
+
+const calcScreen = document.getElementById('calcScreen');
 
 button.forEach((x) => {
-    x.addEventListener('click', ()=> {
+    x.addEventListener('click', function(num) {
         const numValue = x.value;
-        console.log(numValue);
-        switch (numValue){
-            case "1":
-                alert(numValue);
-                break;
-            case "2":
-                alert(numValue);
-                break;
-            case "3":
-                alert(numValue);
-                break;
-            case "4":
-                alert(numValue);
-                break;
-            case "5":
-                alert(numValue);
-                break;
-            case "6":
-                alert(numValue);
-                break;
-            case "7":
-                alert(numValue);
-                break;
-            case "8":
-                alert(numValue);
-                break;
-            case "9":
-                alert(numValue);
-                break;
-            case "0":
-                alert(numValue);
-                break;
+        console.log("NUM:", numValue);
+        calcScreen.innerText = numValue;
+    });
+});
 
-
-            case "+":
-                alert(numValue);
-                break;
-            case "-":
-                alert(numValue);
-                break;
-            case "/":
-                alert(numValue);
-                break;
-            case "*":
-                alert(numValue);
-                break;
-            case "+/-":
-                alert(numValue);
-                break;
-            case "%":
-                alert(numValue);
-                break;
-            case "clear":
-                alert(numValue);
-                break;
-
-
-            case "=":
-                alert(numValue);
-                break;
-
-            default:
-                console.log("nada");
-                break;
-        }
-    })
-})
-
-const calculation = [];
-
+multiply.addEventListener('click', function(numValue){
+    return numValue * numValue;
+});
 
 
 
@@ -102,18 +46,19 @@ numbers.push(numTwo);
 
 //goal: call each respective function when the button is clicked. add event listener?
 //addition for loop
-let sum = 0;
 
-for (i=0; i<numbers.length; i++){
-    sum += numbers[i];
+function sum(numValue){
+    for (i = 0; i < numbers.length; i++) {
+        numValue += numbers[i];
+    }
+    console.log(sum);
 }
-console.log(sum);
 
 
 //subtration for loop
 let difference = 0;
 
-for (i=0; i<numbers.length; i++){
+for (i = 0; i < numbers.length; i++) {
     difference -= numbers[i];
 }
 console.log(difference);
@@ -122,7 +67,7 @@ console.log(difference);
 //division for loop
 let solution = 100;
 
-for (i=0; i<numbers.length; i++){
+for (i = 0; i < numbers.length; i++) {
     solution /= numbers[i];
 }
 console.log(solution);
@@ -131,7 +76,7 @@ console.log(solution);
 //multiplication for loop
 let product = 100;
 
-for (i=0; i<numbers.length; i++){
+for (i = 0; i < numbers.length; i++) {
     product *= numbers[i];
 }
 console.log(product);
