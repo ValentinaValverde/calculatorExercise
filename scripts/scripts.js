@@ -1,5 +1,4 @@
 
-
 const numOne = document.getElementById('numOne').value;
 const numTwo = document.getElementById('numTwo').value;
 const numThree = document.getElementById('numThree').value;
@@ -13,39 +12,31 @@ const numZero = document.getElementById('numZero').value;
 
 const button = document.querySelectorAll('.button');
 
-const add = document.getElementById('add').value;
-const subtract = document.getElementById('subtract').value;
-const divide = document.getElementById('divide').value;
-const multiply = document.getElementById('multiply').value;
+const add = document.getElementById('add');
+const subtract = document.getElementById('subtract');
+const divide = document.getElementById('divide');
+const multiply = document.getElementById('multiply');
 
 
 //new goal: make the values appear on the calculator screen.
 //Update: DONE!
 //new goal: display mult nums/vals at once
 
-const calcScreen = document.getElementById('calcScreen');
+// const calcScreen = document.getElementById('calcScreen');
 
-button.forEach((x) => {
-    x.addEventListener('click', function(num) {
-        const numValue = x.value;
-        console.log("NUM:", numValue);
-        calcScreen.innerText = numValue;
-    });
-});
-
-multiply.addEventListener('click', function(numValue){
-    return numValue * numValue;
-});
-
-
-
-//goal: let the arr nums = the value of the buttons clicked.
-const numbers = [numOne, numFive];
-numbers.push(numTwo);
+// button.forEach((x) => {
+//     x.addEventListener('click', function(num) {
+//         const numValue = x.value;
+//         console.log("NUM:", numValue);
+//         calcScreen.innerText = numValue;
+//     });
+// });
 
 
 //goal: call each respective function when the button is clicked. add event listener?
 //addition for loop
+const numbers = [];
+
 
 function sum(numValue){
     for (i = 0; i < numbers.length; i++) {
@@ -85,17 +76,26 @@ console.log(product);
 
 
 
-
-
-
-//Isaac tried helping but now I'm more confused
-const pushNum = (a) => {
-    console.log(a);
-}
-
 button.forEach((b) => b.addEventListener('click', function () {
-    if (value = 0) {
-        pushNum(numZero);
-    }
+    const numArray = [];
 
-}))
+    if (value = 0) {
+        numArray.push(numZero);
+    };
+    if (value = 1) {
+        numArray.push(numOne);
+    };
+    if (value = 2) {
+        numArray.push(numTwo);
+    };
+    if (value = 3) {
+        numArray.push(numThree);
+    };
+    if (value = 4) {
+        numArray.push(numFour);
+    };
+    if (value = 5) {
+        numArray.push(numFive);
+    };
+    // console.log(numArray);
+}));

@@ -1,32 +1,32 @@
 html {
     font-size: 16px;
     box-sizing: border-box;
-  }
-  
-  *,
-  *:before,
-  *:after {
+}
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
-  }
-  
-  body {
+}
+
+body {
     font-family: Helvetica;
     background: #c5d1eb;
     display: flex;
     justify-content: center;
     flex-direction: row;
-  }
+}
 
-
-.calcMain{
+/* the parts in the "calc main" don't make sense, but it works so I won't be messing with it :) */
+.calcMain {
     display: grid;
-    grid-template-areas: 
-    "header header header header"
-    "AC plusMinus percentage divide"
-    "seven eight nine mult"
-    "four five six minus"
-    "one two three plus"
-    "zero zero dot equal";
+    grid-template-areas:
+        "header header header header"
+        "AC plusMinus percentage divide"
+        "seven eight nine mult"
+        "four five six minus"
+        "one two three plus"
+        "zero doubleZero dot equal";
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr;
     background-color: #d4d4d2;
@@ -34,11 +34,10 @@ html {
     width: 400px;
     height: 600px;
     border-radius: 15px;
-    place-items: center; 
+    place-items: center;
 }
 
-
-.header{
+.header {
     background-color: #171738;
     grid-area: header;
     width: 100%;
@@ -50,36 +49,35 @@ html {
     font-size: 3rem;
 }
 
-input[type='number']{
+input[type='number'] {
     font-size: 3rem;
-} 
+}
 
-.topThree{
+.topThree {
     background-color: #efe9f4;
     color: black;
 }
 
-.operations{
+.operations {
     background-color: #3423a6;
 }
 
-.numbers{
+.numbers {
     background-color: #7180b9;
-
 }
 
-button{
+button {
     width: 100%;
     height: 100%;
     font-size: 1.5rem;
     color: white;
 }
 
-.zero{
+.zero {
     grid-area: zero;
     border-bottom-left-radius: 15px;
 }
 
-.equal{
+.equal {
     border-bottom-right-radius: 15px;
 }
