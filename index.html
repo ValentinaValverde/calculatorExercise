@@ -11,11 +11,11 @@
 <body>
     <div class="calcMain">
         <div class="header">
-            <input id="calcScreen" class="header" type="text" name="display">
+            <input id="display" class="header calcScreen" type="text">
         </div>
 
-        <button type="button" value="clear" class="button topThree">AC</button>
-        <button type="button" value="DE" class="button topThree">DE</button>
+        <button type="button" value="clear" class="button topThree" onclick="display.value = ''">AC</button>
+        <button type="button" value="DE" class="button topThree" onclick="display.value = display.value.toString().slice(0, -1)">DE</button>
         <button type="button" value="." class="button topThree" onclick="display.value += '.'">.</button>
         <button type="button" id="divide" value="/" class="button operations divide" onclick="display.value += '/'">/</button>
 

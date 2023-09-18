@@ -80,4 +80,5 @@ button {
 
 .equal {
     border-bottom-right-radius: 15px;
+    grid-column: 3 / span 2;
 }
